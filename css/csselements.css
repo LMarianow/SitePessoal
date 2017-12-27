@@ -1,0 +1,266 @@
+/* 
+    Document   : csselements.css
+    Created on : Feb 25, 2017
+    Author     : Chris Meyers
+    Description:
+        Fullscreen desktop stylesheet.
+*/
+
+@media screen and (min-width: 970px){
+    /********************* GENERAL *********************/
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+    
+    body { 
+        margin: 0;
+    }
+
+    .parent {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    /********************* HEADER **********************/
+    .nav {
+        width: 300px;
+    }
+
+    #full-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .headerLink {
+        margin-left: 20px
+    }
+
+    #banner-icon {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+
+    #banner-small img {
+        padding-top: 10px;
+    }
+
+    .side-nav-logo {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    .side-nav-items {
+        list-style: none;
+        text-align: right;
+        padding-left: 0;
+        padding-right: 10px;
+        padding-top: 20px;
+        margin-top: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .side-nav-items > li {
+        height: 70px;
+        font-size: 33px;
+    }
+    .side-nav-items > li > a:hover {
+        color: #5bb75b !important;
+        cursor: pointer;
+    }
+
+    .overlay {
+        display: none;
+    }
+
+    /********************* CONTENT *********************/
+    .content {
+        -webkit-flex: 1;
+        flex: 1;
+    }
+
+    .content-text {
+        padding: 10px 15px;
+        max-width: 1595px; /* Max width = 1920, adjusted for margins and nav. Does not account for scroll bars. */
+        margin: 0 auto; /* Centers content if width is greater than 1920px. */
+    }
+
+    .section-header-size {
+        height: 90px;
+        line-height: 80px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    /********************* BUILDS *********************/
+    .build-info {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .build-specs {
+        -webkit-flex: 1;
+        flex: 1;
+        padding-right: 10px;
+    }
+
+    .build-pic-img-land {
+        height: 260px;
+        width: 415px;
+    }
+
+    .build-pic-img-port {
+        height: 450px; 
+        width: 348px;
+    }
+
+    /********************* PROJECTS *********************/
+    .projWrapper {
+        display: -webkit-flex;
+        display: flex;
+    }
+
+    .projDesc {
+        -webkit-flex: 1;
+        flex: 1;
+        padding-right: 10px;
+    }
+
+    .projImages-full-img-square {
+        height: 415px;
+        width: 415px;
+    }
+    
+    .projImages-full-img-land {
+        height: 260px;
+        width: 415px;
+    }
+    
+    .projImages-full-img-port {
+        height: 415px;
+        width: 260px;
+    }
+    
+    /********************* CONTACT *********************/
+    .alert-offset {
+        margin-left: 0px;
+    }
+
+    .contact-links {
+        margin-left: 20px;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .contact-links > a {
+        margin-bottom: 10px;
+    }
+
+    .contact-methods {
+        display: -webkit-flex;
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .contact-social-block {
+        -webkit-flex: 2 0 0;
+        flex: 2 0 0;
+        padding-right: 50px;
+    }
+
+    .contact-form-block {
+        -webkit-flex: 3 0 0;
+        flex: 3 0 0;
+        text-align: right;
+    }
+
+    .contact-social {
+        width: 100%;
+    }
+
+    .contact-social:hover > span {
+        color: #5bb75b;
+    }
+
+    .contact-social-words {
+        color: #000000;
+        margin-bottom: 20px;
+        position: relative;
+        top: -25px;
+    }
+
+    /********************* PROMPT *********************/
+    .prompt-style {
+        background-color: rgba(0,0,0,0.85);
+        color: #00CC00;
+        font-family: "Courier New", Courier, monospace;
+        border: 0;
+        font-weight: bold;
+    }
+
+    #prompt-div {
+        bottom: 30px;
+        margin-left: 5px;
+        position: fixed;
+        display: none;
+    }
+
+    #prompt-caret {
+        width: 10px;
+        float: left;
+        font-weight: bold;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+    #prompt-caret:focus {
+        outline: none;
+    }
+
+    #prompt {
+        width: 500px;
+        float: right;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+    #prompt:focus {
+        outline: none;
+    }
+    #prompt::-ms-clear {
+        width: 0px;
+        height: 0px;
+    }
+
+    #prompt-textarea {
+        width: 525px;
+        border: 0;
+        resize: none;
+        position: absolute;
+        bottom: 30px;
+        display: none;
+        font-size: 12px;
+        height: 150px;
+    }
+    #prompt-textarea:focus {
+        outline: none;
+    }
+
+    #prompt-textarea-btn {
+        border: 0;
+        width: 21px;
+        height: 27px;
+    }
+    #prompt-textarea-btn:focus {
+        outline: none;
+    }
+
+    /********************* FOOTER *********************/
+    .footer-content {
+        display: none;
+    }
+}
